@@ -62,5 +62,11 @@ string Vocabulary::getComment() const
 {
     return this->comment;
 }
+const string Vocabulary::show()
+{
+    stringstream word;
+    word << "number: " << this->getNr() << "\n word:" << this->getWords() << "\n comment: " << (this->getComment() == "" ? "<empty>" : this->getComment()) << endl;
+    return word.str();
+}
 
 
