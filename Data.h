@@ -27,6 +27,7 @@ class Data {
   
 private:
     string line;
+    vector<Loc
     /*SectionX reads each section into appropiate vector*/
     void sectionOne(fstream &file);
     void sectionTwo(fstream &file);
