@@ -14,3 +14,5 @@ nbproject/Package-Release.bash
 nbproject/configurations.xml
 
 nbproject/project.xml
+
+*.inc
