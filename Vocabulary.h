@@ -8,8 +8,9 @@
 
 #include <vector>
 #include <string>
-#include <string.h>
 #include <iostream>
+#include <sstream>
+#include <algorithm>
 
 using namespace std;
 
@@ -28,9 +29,13 @@ public:
     
     void setNr(int nr);
     void addWord(string word);
+    void setComment(string comment);
     const int getNr() const;
-    string getWords();
-    
+    string getWords() const;
+    bool wordExist(string word) const;
+    string getComment() const;
+    const string show();
+    virtual const string toString() = 0;
 };
 
 
