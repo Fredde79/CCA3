@@ -1,7 +1,6 @@
 #include "Vocabulary.h"
 
 Vocabulary::Vocabulary(){
-//this->sect4 = vector<string>(10000, string(""));
     this->number=0;
     this->words = new vector<string>();
     this->comment="";
@@ -24,7 +23,44 @@ void Vocabulary::setNr(int nr)
 }
 void Vocabulary::addWord(string word)
 {
-
+    this->words->push_back(word);
 }
-//this->sect4 = vector<string>(10000, string(""));
-//Vocabulary::~Vocabulary(){}
+void Vocabulary::setComment(string comment)
+{
+    this->comment=comment;
+}
+const int Vocabulary::getNr() const
+{
+    return this->number;
+}
+string Vocabulary::getWords() const
+{
+    string word="";
+    for(int i=0; i<this->words->size(); i++)
+    {
+        word += this->words->at(i);
+        if( i != this->words->size()-1)
+        {
+            word += " ";
+        }
+    }
+    return word;
+}
+bool Vocabulary::wordExist(string word) const
+{
+    for(int i=0; i<this->words->size(); i++)
+    {
+        transform(word.begin(), word.end(), word.begin(), ::toupper);
+        if(this->words->at(i) == word)
+        {
+            return true;
+        }
+    }
+    return false;
+}
+string Vocabulary::getComment() const
+{
+    return this->comment;
+}
+
+
