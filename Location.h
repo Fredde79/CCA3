@@ -20,7 +20,6 @@ using namespace std;
 #define	LOCATION_H
 class Location{
 private:
-<<<<<<< HEAD
     int number;
     int location;
     int numberOfVisits;
@@ -78,14 +77,12 @@ public:
      * void addLocationCondition(LocationCondition* locC);
      * LocationCondition* getLocationConditionForLocation(Location* loc) const;
      * string toString();**/
-=======
     
 public:
     Location();
     ~Location();
     vector<string> sect1; /*long description*/
 
->>>>>>> new repo for CCA
 };
 #endif	/* LOCATION_H */
 

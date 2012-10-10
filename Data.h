@@ -18,10 +18,7 @@ class Data : public Location, Short_desc, TravelTable, Vocabulary, Object_desc{
   
 private:
     string line;
-<<<<<<< HEAD
     /*SectionX reads each section into appropiate vector*/
-=======
->>>>>>> new repo for CCA
     void sectionOne(fstream &file);
     void sectionTwo(fstream &file);
     void sectionThree(fstream &file);

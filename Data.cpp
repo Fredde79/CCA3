@@ -9,11 +9,8 @@ void Data::readFile(){
     fstream file;
     char* pch;
     int i;
-<<<<<<< HEAD
     file.open("advent.dat", ios::in);
-=======
     file.open("advent.dat");
->>>>>>> new repo for CCA
    
     if(file.is_open()){
        
@@ -158,7 +155,7 @@ void Data::sectionFour(fstream &file){
             pch = strtok(NULL,"\n");
             if(pch != NULL)
             { 
-                this->sect4[i].append(pch);   
+                //this->sect4[i].append(pch);   
             }
             
         }

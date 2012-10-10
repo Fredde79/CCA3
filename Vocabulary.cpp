@@ -1,7 +1,6 @@
 #include "Vocabulary.h"
 
 Vocabulary::Vocabulary(){
-<<<<<<< HEAD
 //this->sect4 = vector<string>(10000, string(""));
     this->number=0;
     this->words = new vector<string>();
@@ -27,8 +26,5 @@ void Vocabulary::addWord(string word)
 {
 
 }
-=======
-this->sect4 = vector<string>(10000, string(""));
-}
+//this->sect4 = vector<string>(10000, string(""));
 Vocabulary::~Vocabulary(){}
->>>>>>> new repo for CCA

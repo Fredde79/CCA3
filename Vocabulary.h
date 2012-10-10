@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 /* 
  * File:   Location.h
  * Author: Daniel Nilsson and Fredrik Hägg 
@@ -6,8 +6,6 @@
  * Created on October 4, 2012, 9:58 AM
  */
 
-=======
->>>>>>> new repo for CCA
 #include <vector>
 #include <string>
 #include <string.h>
@@ -17,7 +15,6 @@ using namespace std;
 
 #ifndef VOCABULARY_H
 #define	VOCABULARY_H
-<<<<<<< HEAD
 /**Vocabulary = words*/
 class Vocabulary{
 private:
@@ -33,16 +30,6 @@ public:
     void addWord(string word);
     const int getNr() const;
     
-
-=======
-
-class Vocabulary{
-private:
-public:
-    Vocabulary();
-    ~Vocabulary();
-    vector<string> sect4;
->>>>>>> new repo for CCA
 };
 
 
