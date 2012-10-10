@@ -2,6 +2,8 @@
  * File:   AVerb.h
  * Author: Daniel Nilsson & Fredrik Hägg
  *
+ * 
+ * SECTION 4
  */
 #include <iostream>
 #include <string>

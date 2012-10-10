@@ -2,6 +2,7 @@
  * File:   Message.h
  * Author: Daniel Nilsson & Fredrik Hägg
  *
+ * SECTION 5
  */
 #include <iostream>
 #include <string>
