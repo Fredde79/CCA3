@@ -14,4 +14,5 @@ MotionVerb::~MotionVerb() {}
 
 string MotionVerb::toString() {
     //return "Type: MotionVerb\n" + this->showSpec();
+    //hejsan
 }
