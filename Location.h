@@ -1,13 +1,4 @@
-/* 
- * File:   Location.h
-<<<<<<< HEAD
- * Author: Daniel Nilsson and Fredrik Hägg 
-=======
- * Author: sherlock
->>>>>>> new repo for CCA
- *
- * Created on October 4, 2012, 9:58 AM
- */
+
 #include <vector>
 #include <string>
 #include <string.h>
@@ -25,7 +16,7 @@ private:
     int numberOfVisits;
     string shortDesc;
     string longDesc;
-    vector<Object_desc*> *objects;
+    //vector<Object_desc*> *objects;
     /**
      * Todo vector<bool> assets;
      * vector<Hint*> *hints;
@@ -79,8 +70,6 @@ public:
      * string toString();**/
     
 public:
-    Location();
-    ~Location();
     vector<string> sect1; /*long description*/
 
 };

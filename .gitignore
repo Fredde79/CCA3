@@ -2,3 +2,15 @@ build/**/*
 dist/**
 .Makefile
 nbsproject/
+/nbproject/private/
+Makefile
+
+*.mk
+
+nbproject/Package-Debug.bash
+
+nbproject/Package-Release.bash
+
+nbproject/configurations.xml
+
+nbproject/project.xml
