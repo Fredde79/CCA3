@@ -29,6 +29,7 @@ public:
     void setNr(int nr);
     void addWord(string word);
     const int getNr() const;
+    string getWords();
     
 };
 
