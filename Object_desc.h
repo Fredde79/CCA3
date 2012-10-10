@@ -1,26 +1,43 @@
-#include <vector>
-#include <string>
-#include <string.h>
 #include <iostream>
+#include <string>
+#include <vector>
+#include "Vocabulary.h"
 
 using namespace std;
 
 #ifndef OBJECT_DESC_H
 #define	OBJECT_DESC_H
-class Object_desc{
+class Object_desc : public Vocabulary{
 private:
-    int capacity;
-    string message[];
-    string inventory;
-    //vector<string> sect5;
+    int propVal;
+    string invMsg;
+    vector<string> *descriptions;
+    bool treasure;
+    bool movable;
+    bool lightable;
+    bool lit;
 public:
-    Object_desc();
-    virtual ~Object_desc();
-    void setMessage(int pos, string msg);
-    string getMessage(int pos);
-    string getInventory();
-    void setInventory(string inv);
-    
+    Object(int number, string word, string comment);
+    ~Object();
+    int getPropVal() const;
+    void setPropVal(int propVal);
+    string getInvMsg() const;
+    void setInvMsg(string msg);
+    void setDescriptionsVector(vector<string> NewVector);
+    string getDescForPropVal(int n) const;
+    string getPropDesc() const;
+    string getCurrPropDesc();
+    void addPropDesc(string desc);
+    //void appendToPropertyDescription(const int n, const string desc);
+    bool isTreasure() const;
+    void setTreasure(bool treasure);
+    bool isMovable() const;
+    void setMovable(bool movable);
+    bool isLightable() const;
+    void setLightable(bool light);
+    bool isLit() const;
+    void setLit(bool light);
+    string toString();
 };
 
 
