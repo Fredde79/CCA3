@@ -11,6 +11,7 @@ using namespace std;
 #define	LOCATION_H
 class Location{
 private:
+    vector<string> sect1; /*long description*/
     int number;
     int location;
     int numberOfVisits;
@@ -69,8 +70,6 @@ public:
      * LocationCondition* getLocationConditionForLocation(Location* loc) const;
      * string toString();**/
     
-public:
-    vector<string> sect1; /*long description*/
 
 };
 #endif	/* LOCATION_H */
