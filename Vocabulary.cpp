@@ -27,4 +27,4 @@ void Vocabulary::addWord(string word)
 
 }
 //this->sect4 = vector<string>(10000, string(""));
-Vocabulary::~Vocabulary(){}
+//Vocabulary::~Vocabulary(){}

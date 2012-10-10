@@ -6,7 +6,7 @@
 #include <stdlib.h>
 #include <fstream>
 #include <vector>
-#include "Location.h"
+//#include "Location.h"
 #include "Short_desc.h"
 #include "TravelTable.h"
 #include "Vocabulary.h"
@@ -14,7 +14,7 @@
 
 using namespace std;
 
-class Data : public Location, Short_desc, TravelTable, Vocabulary, Object_desc{
+class Data /*: public Location, Short_desc, TravelTable, Vocabulary, Object_desc*/{
   
 private:
     string line;

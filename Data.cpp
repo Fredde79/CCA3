@@ -72,7 +72,7 @@ void Data::sectionOne(fstream& file){
             
             if(pch != NULL)
             {
-                this->sect1[i].append(pch);
+                //this->sect1[i].append(pch);
             }
         }
         //cout << line << endl; 
@@ -99,7 +99,7 @@ void Data::sectionTwo(fstream& file){
             pch = strtok(NULL,"\t");
             if(pch != NULL)
             { 
-                this->sect2[i].append(pch);
+                //this->sect2[i].append(pch);
             }
             
         }
@@ -127,7 +127,7 @@ void Data::sectionThree(fstream &file){
             pch = strtok(NULL,"\n");
             if(pch != NULL)
             { 
-                this->sect3[i].append(pch);   
+                //this->sect3[i].append(pch);   
             }
             
         }
