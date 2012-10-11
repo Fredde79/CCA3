@@ -61,6 +61,7 @@ void Data::readFile(){
            {
                
                case 1:/*section 1*/
+                   cout << "\n section 1 \n";
                 this->sectionOne(file);
                 break;
                 
@@ -94,7 +95,7 @@ void Data::sectionOne(fstream& file){
     char* pointer = buffer;
     char *pch;
     int i=0;
-   
+   Location *current=NULL;
    do
    {
         buffer[0]  = 0;
@@ -102,7 +103,7 @@ void Data::sectionOne(fstream& file){
         strncpy(pointer, line.c_str(), 1024);
         pch = strtok(pointer,"\t");
         i=atoi(pch);
-        Location *current=NULL;
+        
         if(i > 0)
         {
             pch = strtok(NULL,"\t");
@@ -110,7 +111,10 @@ void Data::sectionOne(fstream& file){
             if(pch != NULL)
             {
                 current=new Location(i, pch);
-                this->locations->at(i) = current;
+                //cout << current->toString();
+                
+                
+                /*this->locations->at(i) = current;
                 if(i == this->locations->at(i)->getNumber())
                 {
                 //append
@@ -118,14 +122,16 @@ void Data::sectionOne(fstream& file){
                 }
                 //remove current
                 current=NULL;
+                */
             }
         }
    }
     while(strncmp(line.c_str(), "-1", 2) != 0);
-    
+    cout << current->toString();
+    /*
     for (int i = 0; i < this->locations->size(); i++) {
         cout << this->locations->at(i)->toString() << endl;
-    }
+    }*/
 }
 void Data::sectionTwo(fstream& file){
     

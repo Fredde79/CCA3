@@ -329,6 +329,7 @@ string Location::getSect11() {
 
 string Location::toString() {
     stringstream s;
-    s << "Id: " << this->getNumber() << endl << "Short description:" << endl << (this->getShortDesc() == "" ? "<empty>" : this->getShortDesc()) << endl << "Long description:" << endl << this->getLongDesc() << endl << "Objects:" << endl << this->listObjects() << endl << this->getHints() << this->getAccNmotionverb() << this->printMessagesNmotionverb() << this->getSect9();
+    //s << "Id: " << this->getNumber() << endl << "Short description:" << endl << (this->getShortDesc() == "" ? "<empty>" : this->getShortDesc()) << endl << "Long description:" << endl << this->getLongDesc() << endl << "Objects:" << endl << this->listObjects() << endl << this->getHints() << this->getAccNmotionverb() << this->printMessagesNmotionverb() << this->getSect9();
+    s << "Id: " << this->getNumber() << endl << "Short description:" << endl << (this->getShortDesc() == "" ? "<empty>" : this->getShortDesc()) << endl << "Long description:" << endl << this->getLongDesc() << endl;
     return s.str();
 }
