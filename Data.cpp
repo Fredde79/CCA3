@@ -1,9 +1,46 @@
 #include "Data.h"
 
 Data::Data(){
-    this->line="";    
+    this->line="";  
+    this->locations=new vector<Location*>();
+    this->traveltables= new vector<TravelTable*>();
+    this->vocabulary=new vector<Vocabulary*>();
+    this->messages=new vector<Message*>();
+    this->magicmsgs=new vector<MagicMsg*>();
+    this->classmsgs=new vector<ClassMsg*>();
+    this->hints=new vector<Hint*>();
+    //this->readFile();
 }
-Data::~Data(){}
+Data::~Data(){
+/**avallokera alla vectorer*/
+    for(int i=0; i<this->locations->size(); i++)
+        delete this->locations->at(i);
+    delete this->locations;
+    
+    for(int i=0; i<this->traveltables->size(); i++)
+        delete this->traveltables->at(i);
+    delete this->traveltables;
+    
+    for(int i=0; i<this->vocabulary->size(); i++)
+        delete this->vocabulary->at(i);
+    delete this->vocabulary;
+    
+    for(int i=0; i<this->messages->size(); i++)
+        delete this->messages->at(i);
+    delete this->messages;
+    
+    for(int i=0; i<this->magicmsgs->size(); i++)
+        delete this->magicmsgs->at(i);
+    delete this->magicmsgs;
+    
+    for(int i=0; i<this->classmsgs->size(); i++)
+        delete this->classmsgs->at(i);
+    delete this->classmsgs;
+    
+    for(int i=0; i<this->hints->size(); i++)
+        delete this->hints->at(i);
+    delete this->hints;
+}
 
 void Data::readFile(){
     fstream file;
@@ -65,20 +102,30 @@ void Data::sectionOne(fstream& file){
         strncpy(pointer, line.c_str(), 1024);
         pch = strtok(pointer,"\t");
         i=atoi(pch);
-        int index = 0;
+        Location *current=NULL;
         if(i > 0)
         {
             pch = strtok(NULL,"\t");
             
             if(pch != NULL)
             {
-                index = new Location(i, pch);
-                this->locations->push_back(index);
+                current=new Location(i, pch);
+                this->locations->at(i) = current;
+                if(i == this->locations->at(i)->getNumber())
+                {
+                //append
+                    this->locations->at(i)->appendLongDesc(pch);
+                }
+                //remove current
+                current=NULL;
             }
         }
    }
     while(strncmp(line.c_str(), "-1", 2) != 0);
-    cout << this->locations.at(1);
+    
+    for (int i = 0; i < this->locations->size(); i++) {
+        cout << this->locations->at(i)->toString() << endl;
+    }
 }
 void Data::sectionTwo(fstream& file){
     
