@@ -296,7 +296,7 @@ string Location::printMessagesNmotionverb() const {
     }
     return ss.str();
 }
-string Location::getSect9() const const {
+string Location::getSect9() const {
     stringstream ss;
     ss << "Assets:" << endl;
     for (int i = 0; i < this->sect9.size(); i++) {

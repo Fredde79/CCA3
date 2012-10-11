@@ -12,6 +12,6 @@ ClassMsg::~ClassMsg(){}
 string ClassMsg::toString()
 {
     stringstream msg;
-    msg << this->getNr() + this->getContent();
+    msg << "Number:" << endl << this->getNr() << endl << "Content:" << endl << this->getContent() << endl;
     return msg.str();
 }

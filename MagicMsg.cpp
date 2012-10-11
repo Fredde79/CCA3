@@ -12,6 +12,6 @@ MagicMsg::~MagicMsg(){}
 string MagicMsg::toString()
 {
     stringstream magic;
-    magic << this->getNr() + this->getContent();
+     magic << "Number:" << endl << this->getNr() << endl << "Content:" << endl << this->getContent() << endl;
     return magic.str();
 }
