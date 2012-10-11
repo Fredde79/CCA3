@@ -7,7 +7,7 @@ Location::Location(){
     this->numberOfVisits=0;
     this->shortDesc="";
     this->objects=new vector<Object_desc*>();
-    this->sect9=new vector<bool>();
+    this->sect9=vector<bool>();
     for(int i=0; i<10; i++)
         this->sect9.push_back(false);
     this->hints=new vector<Hint*>();
@@ -25,7 +25,7 @@ Location::Location(int number){
     this->numberOfVisits=0;
     this->shortDesc="";
     this->objects=new vector<Object_desc*>();
-    this->sect9=new vector<bool>();
+    this->sect9=vector<bool>();
     for(int i=0; i<10; i++)
         this->sect9.push_back(false);
     this->hints=new vector<Hint*>();
@@ -42,7 +42,7 @@ Location::Location(int number, string longDesc){
     this->numberOfVisits=0;
     this->shortDesc="";
     this->objects=new vector<Object_desc*>();
-    this->sect9=new vector<bool>();
+    this->sect9=vector<bool>();
     for(int i=0; i<10; i++)
         this->sect9.push_back(false);
     this->hints=new vector<Hint*>();
@@ -59,7 +59,7 @@ Location::Location(int number, string longDesc, string shortDesc){
     this->numberOfVisits=0;
     this->shortDesc=shortDesc;
     this->objects=new vector<Object_desc*>();
-    this->sect9=new vector<bool>();
+    this->sect9=vector<bool>();
     for(int i=0; i<10; i++)
         this->sect9.push_back(false);
     this->hints=new vector<Hint*>();
