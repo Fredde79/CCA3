@@ -96,6 +96,7 @@ void Data::sectionOne(fstream& file){
     char *pch;
     int i=0;
    Location *current=NULL;
+   string temp;
    do
    {
         buffer[0]  = 0;
@@ -104,34 +105,45 @@ void Data::sectionOne(fstream& file){
         pch = strtok(pointer,"\t");
         i=atoi(pch);
         
+        
         if(i > 0)
         {
             pch = strtok(NULL,"\t");
             
+            
+            
             if(pch != NULL)
             {
-                current=new Location(i, pch);
+                
+                temp.append(pch);
+                
+                
                 //cout << current->toString();
                 
-                
-                /*this->locations->at(i) = current;
-                if(i == this->locations->at(i)->getNumber())
-                {
+                //his->locations->at(i) = current;
+                //if(i == this->locations->at(i)->getNumber())
+                //{
                 //append
-                    this->locations->at(i)->appendLongDesc(pch);
-                }
+                    //this->*locations->at(i)->appendLongDesc(pch);
+                //}
                 //remove current
-                current=NULL;
-                */
+                 
+                
+                
             }
+            
         }
    }
     while(strncmp(line.c_str(), "-1", 2) != 0);
-    cout << current->toString();
-    /*
+    //cout << current->toString();
+    current=new Location(i, temp);
+    this->locations->push_back(current);
+    current=NULL;
+    temp="";
     for (int i = 0; i < this->locations->size(); i++) {
         cout << this->locations->at(i)->toString() << endl;
-    }*/
+    }
+    
 }
 void Data::sectionTwo(fstream& file){
     
