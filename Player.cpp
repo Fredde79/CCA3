@@ -25,7 +25,7 @@ Location* Player::getCurrLoc() const{
     return this->currLoc;
 }
 void Player::pickObj(Object_desc* obj){
-    this->objects->pop_back(obj);
+    this->objects->push_back(obj);
 }
 void Player::dropObj(Object_desc* obj){
     bool ok=false;

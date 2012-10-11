@@ -64,7 +64,7 @@ Message* Hint::getHintObject() {
 }
 string Hint::toString() {
     stringstream ss;
-    ss << "Condition bit:" << endl << this->getCondBit() << endl << "Number of turns:" << endl << this->getNumberOfTurns() << endl;
+    ss << "Condition bit:" << endl << this->getCondBit() << endl << "Number of turns:" << endl << this->getNumOfTurns() << endl;
     ss << "Points to deduct: " << endl << this->getPointsToDeduct() << endl << "Question:" << endl << this->getQuestion(false) << endl;
     ss << "Hint:" << endl << this->getHint(false) << endl;
     return ss.str();
