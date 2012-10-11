@@ -171,7 +171,7 @@ void Location::addAccessibleLocation(Location* loc)
 void Location::addMotionVerb(Location* loc, MotionVerb* verb)
 {
     int i= this->getAccessibleLocationIndex(loc);
-    this->motionVerbs->at(index)->push_back(verb);
+    this->motionVerbs->at(i)->push_back(verb);
 }
 Location* Location::shouldGoToLocation(MotionVerb* verb)
 {
