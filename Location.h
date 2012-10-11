@@ -44,6 +44,8 @@ public:
     Location(int number, string longDesc);
     Location(int number, string longDesc, string shortDesc);
     virtual ~Location();
+    void appendShortDesc(const string desc);
+    void appendLongDesc(const string desc);
     int getNumber() const;
     void setNumber(int number);
     int getNumberOfVisits() const;

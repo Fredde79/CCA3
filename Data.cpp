@@ -65,18 +65,20 @@ void Data::sectionOne(fstream& file){
         strncpy(pointer, line.c_str(), 1024);
         pch = strtok(pointer,"\t");
         i=atoi(pch);
+        int index = 0;
         if(i > 0)
         {
             pch = strtok(NULL,"\t");
             
             if(pch != NULL)
             {
-                //Location)this->locations[i]
+                index = new Location(i, pch);
+                this->locations->push_back(index);
             }
         }
    }
     while(strncmp(line.c_str(), "-1", 2) != 0);
-   // cout << this->sect1.at(140);
+    cout << this->locations.at(1);
 }
 void Data::sectionTwo(fstream& file){
     

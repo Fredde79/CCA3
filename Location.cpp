@@ -87,6 +87,14 @@ Location::~Location(){
     delete this->hints;
     delete this->traveltable;
 }
+void Location::appendLongDesc(const string desc)
+{
+    this->longDesc += desc + " ";
+}
+void Location::appendShortDesc(const string desc)
+{
+    this->shortDesc += desc + " ";
+}
 int Location::getNumber() const{
     return this->number;
 }
