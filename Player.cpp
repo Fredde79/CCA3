@@ -55,7 +55,7 @@ void Player::removeObj(Object_desc* obj){
     for(int i =0; i<this->objects->size() && !del; i++){
         if(this->objects->at(i) == obj)
         {
-            this->objects->erase(this->objects->at(i)+i);
+            this->objects->erase(this->objects->begin()+i);
             del=true;
         }
     }

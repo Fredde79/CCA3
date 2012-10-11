@@ -23,7 +23,7 @@ Message* Averb::getMsgObject()
 {
     return this->msg;
 }
-string Averb::toString()
+const string Averb::toString()
 {
     return this->getMessage() + this->show();
 }

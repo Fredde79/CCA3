@@ -21,7 +21,7 @@ public:
     void setMessage(Message *msg);
     string getMessage();
     Message* getMsgObject();
-    const string toString();
+    virtual const string toString();
     
 };
 #endif	/* AVERB_H */
