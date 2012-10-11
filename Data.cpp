@@ -10,7 +10,6 @@ void Data::readFile(){
     char* pch;
     int i;
     file.open("advent.dat", ios::in);
-    file.open("advent.dat");
    
     if(file.is_open()){
        
@@ -72,10 +71,9 @@ void Data::sectionOne(fstream& file){
             
             if(pch != NULL)
             {
-                //this->sect1[i].append(pch);
+                //Location)this->locations[i]
             }
         }
-        //cout << line << endl; 
    }
     while(strncmp(line.c_str(), "-1", 2) != 0);
    // cout << this->sect1.at(140);

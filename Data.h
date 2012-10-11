@@ -29,6 +29,13 @@ class Data {
   
 private:
     string line;
+    vector<Location*> *locations;
+    vector<TravelTable*> *traveltables;
+    vector<Vocabulary*> *vocabulary;
+    vector<Message*> *messages;
+    vector<MagicMsg*> *magicmsgs;
+    vector<ClassMsg*> *classmsgs;
+    vector<Hint*> *hints;
     /*SectionX reads each section into appropiate vector*/
     void sectionOne(fstream &file);
     void sectionTwo(fstream &file);
