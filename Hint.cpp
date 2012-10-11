@@ -18,7 +18,7 @@ int Hint::getNumOfTurns() const {
 int Hint::getPointsToDeduct() const {
     return this->pointsToDeduct;
 }
-bool Hint::read() const {
+bool Hint::viewHint() const {
     return this->read;
 }
 void Hint::setRead(bool read) {
@@ -63,9 +63,9 @@ Message* Hint::getHintObject() {
     return this->hint;
 }
 string Hint::toString() {
-    //stringstream ss;
-    //ss << "Condition bit:" << endl << this->getConditionBit() << endl << "Number of turns:" << endl << this->getNumberOfTurns() << endl;
-    //ss << "Points to deduct: " << endl << this->getPointsToDeduct() << endl << "Question:" << endl << this->getQuestion(false) << endl;
-    //ss << "Hint:" << endl << this->getHint(false) << endl;
-    //return ss.str();
+    stringstream ss;
+    ss << "Condition bit:" << endl << this->getCondBit() << endl << "Number of turns:" << endl << this->getNumberOfTurns() << endl;
+    ss << "Points to deduct: " << endl << this->getPointsToDeduct() << endl << "Question:" << endl << this->getQuestion(false) << endl;
+    ss << "Hint:" << endl << this->getHint(false) << endl;
+    return ss.str();
 }

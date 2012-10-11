@@ -1,6 +1,6 @@
 #ifndef DATA_H
 #define	DATA_H
-#include <string>
+#include <string.h>
 #include <iostream>
 #include <stdlib.h>
 #include <fstream>
@@ -10,7 +10,7 @@
 /*Location*/
 #include "Location.h"
 #include "TravelTable.h"
-/*vocabulary*/
+
 #include "Vocabulary.h"
 #include "AVerb.h"
 #include "Object_desc.h"
@@ -21,13 +21,14 @@
 #include "MotionVerb.h"
 #include "SCVerb.h"
 #include "Hint.h"
+#include "TravelTable.h"
+ 
 using namespace std;
 
 class Data {
   
 private:
     string line;
-    vector<Loc
     /*SectionX reads each section into appropiate vector*/
     void sectionOne(fstream &file);
     void sectionTwo(fstream &file);

@@ -3,8 +3,7 @@
  * Author: Fredrik Hägg och Daniel Nilsson
  * 
  * 
- *
- * Created on den 10 oktober 2012, 11:21
+
  */
 
 #ifndef HINT_H
@@ -28,7 +27,7 @@ public:
     int getCondBit() const;
     int getNumOfTurns() const;
     int getPointsToDeduct() const;
-    bool read() const;
+    bool viewHint() const;
     void setRead(bool r);
     string getQuestion(bool empty=true);
     Message* getQuestionObject();

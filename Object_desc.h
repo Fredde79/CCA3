@@ -17,13 +17,13 @@ private:
     bool lightable;
     bool lit;
 public:
-    Object(int number, string word, string comment);
-    ~Object();
+    Object_desc(int number, string word, string comment);
+    ~Object_desc();
     int getPropVal() const;
     void setPropVal(int propVal);
     string getInvMsg() const;
     void setInvMsg(string msg);
-    void setDescriptionsVector(vector<string> NewVector);
+    void setDescriptionsVector(vector<string> *NewVector);
     string getDescForPropVal(int n) const;
     string getPropDesc() const;
     string getCurrPropDesc();
@@ -37,7 +37,7 @@ public:
     void setLightable(bool light);
     bool isLit() const;
     void setLit(bool light);
-    string toString();
+    virtual const string toString();
 };
 
 

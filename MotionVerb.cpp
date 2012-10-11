@@ -12,7 +12,6 @@ MotionVerb::MotionVerb(int number)
 }
 MotionVerb::~MotionVerb() {}
 
-string MotionVerb::toString() {
-    //return "Type: MotionVerb\n" + this->showSpec();
-    //hejsan
+const string MotionVerb::toString() {
+    return "Type: MotionVerb\n" + this->show();
 }

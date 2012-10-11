@@ -2,7 +2,6 @@
  * File:   Player.h
  * Author: Fredrik Hägg and Daniel Nilsson
  *
- * Created on den 10 oktober 2012, 11:52
  */
 
 #ifndef PLAYER_H

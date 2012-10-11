@@ -6,7 +6,7 @@ SCVerb::SCVerb(int number, string word, string comment)
 {
 }
 SCVerb::~SCVerb(){}
-string SCVerb::toString()
+const string SCVerb::toString()
 {
     return this->show();
 }

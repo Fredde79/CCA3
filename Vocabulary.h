@@ -3,8 +3,7 @@
  * File:   Location.h
  * Author: Daniel Nilsson and Fredrik Hägg 
  *
- * Created on October 4, 2012, 9:58 AM
- */
+ * */
 
 #include <vector>
 #include <string>
@@ -24,7 +23,7 @@ private:
     string comment;
 public:
     Vocabulary();
-    Vocabulary(int nr, string words, string comment);/*comment=""*/
+    Vocabulary(int number, string words, string comment);/*comment=""*/
     virtual ~Vocabulary();
     
     void setNr(int nr);

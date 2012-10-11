@@ -3,7 +3,7 @@
 #include "Object_desc.h"
 
 
-Object_desc::Object(int number, string word, string comment)
+Object_desc::Object_desc(int number, string word, string comment)
 : Vocabulary(number,word,comment)
 {
     this->invMsg="";
@@ -14,7 +14,7 @@ Object_desc::Object(int number, string word, string comment)
     this->invMsg="";
     this->descriptions=new vector<string>();
 }
-Object_desc::~Object(){
+Object_desc::~Object_desc(){
     delete this->descriptions;
 }
 int Object_desc::getPropVal() const{
@@ -29,7 +29,7 @@ string Object_desc::getInvMsg() const{
 void Object_desc::setInvMsg(string msg){
     this->invMsg=msg;
 }
-void Object_desc::setDescriptionsVector(vector<string>* NewVector){
+void Object_desc::setDescriptionsVector(vector<string> *NewVector){
     delete this->descriptions;
     this->descriptions=NewVector;
 }
@@ -79,8 +79,8 @@ bool Object_desc::isLit() const{
 void Object_desc::setLit(bool light){
     this->lit=light;
 }
-string Object_desc::toString(){
-    //return "Type: Object\n" + this->showSpec() + "Treasure:\n" + (this->isTreasure() ? "Yes" : "No") + "\nMovable:\n" + (this->isMovable() ? "Yes" : "No") + "\nInventory message:\n" + this->getInventoryMessage() + "\nProperty descriptions:" + this->getPropertyDescriptions();
+const string Object_desc::toString(){
+    return "Type: Object\n" + this->show() + "Treasure:\n" + (this->isTreasure() ? "Yes" : "No") + "\nMovable:\n" + (this->isMovable() ? "Yes" : "No") + "\nInventory message:\n" + this->getInvMsg() + "\nProperty descriptions:" + this->getPropDesc();
 }
 
 

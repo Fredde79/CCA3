@@ -7,11 +7,15 @@
 */
 #include <iostream>
 
+
 using namespace std;
 
 
 #ifndef TRAVELTABLE_H
 #define	TRAVELTABLE_H
+
+class Location;
+
 class TravelTable{
 private:
     int motion;

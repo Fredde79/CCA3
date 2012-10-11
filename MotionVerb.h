@@ -2,7 +2,6 @@
  * File:   MotionVerb.h
  * Author: fredrikhagg and Daniel Nilsson
  *
- * Created on den 10 oktober 2012, 11:03
  */
 
 #ifndef MOTIONVERB_H
@@ -21,7 +20,7 @@ class MotionVerb : public Vocabulary{
         MotionVerb(int number);
         ~MotionVerb();
     
-        string toString();
+        virtual const string toString();
 };
 
 

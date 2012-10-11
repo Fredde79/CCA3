@@ -13,7 +13,7 @@ class SCVerb : public Vocabulary{
 public:
     SCVerb(int number, string word, string comment="");
     virtual ~SCVerb();
-    string toString();
+    virtual const string toString();
         
 };
 

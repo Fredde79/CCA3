@@ -6,13 +6,13 @@ Vocabulary::Vocabulary(){
     this->comment="";
 
 }
-Vocabulary::Vocabulary(int nr, string words, string comment){
-    this->number=nr;
+Vocabulary::Vocabulary(int number, string words, string comment){
+    this->number=number;
     this->words = new vector<string>();
     if (words != "") {
         this->words->push_back(words);
     }
-    this->comment=comment;
+    this->comment="";
 }
 Vocabulary::~Vocabulary(){
     delete this->words;

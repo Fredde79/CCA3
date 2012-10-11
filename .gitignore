@@ -16,3 +16,4 @@ nbproject/configurations.xml
 nbproject/project.xml
 
 *.inc
+/build/
