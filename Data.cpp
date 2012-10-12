@@ -48,11 +48,8 @@ void Data::readFile(){
     int i;
     file.open("advent.dat", ios::in);
    
-    if(file.is_open()){
+    if(file.is_open() && !file.eof()){
        
-        
-        while(!file.eof())
-        { 
             getline(file,line);
 
             pch = strtok ((char*)line.c_str(),"\t\n");
@@ -66,15 +63,15 @@ void Data::readFile(){
                 break;
                 
               case 2:/*section 2*/
-                   this->sectionTwo(file);
+                 //  this->sectionTwo(file);
               break;
               
                case 3:/*Section 3*/
-                this->sectionThree(file);
+               // this->sectionThree(file);
                 break;
                    
                case 4:/* Section 4 - VOCABULARY*/
-                   this->sectionFour(file);
+                 //  this->sectionFour(file);
                   // cout << "\n test case 4 \n";
                    break;
                case 5:
@@ -84,7 +81,7 @@ void Data::readFile(){
                 
                   
            }
-        }
+        
        file.close();
     }
         
@@ -96,54 +93,37 @@ void Data::sectionOne(fstream& file){
     char *pch;
     int i=0;
    Location *current=NULL;
-   string temp;
+   //vector<string> currentline;
+   
+
+      
+   
    do
    {
-        buffer[0]  = 0;
-        getline(file, line);
-        strncpy(pointer, line.c_str(), 1024);
-        pch = strtok(pointer,"\t");
-        i=atoi(pch);
-        
-        
+    buffer[0]  = 0;
+    getline(file, line);
+    strncpy(pointer, line.c_str(), 1024);
+    pch = strtok(pointer,"\t");
+    i=atoi(pch);
+    
         if(i > 0)
         {
             pch = strtok(NULL,"\t");
             
-            
-            
             if(pch != NULL)
             {
-                
-                temp.append(pch);
-                
-                
-                //cout << current->toString();
-                
-                //his->locations->at(i) = current;
-                //if(i == this->locations->at(i)->getNumber())
-                //{
-                //append
-                    //this->*locations->at(i)->appendLongDesc(pch);
-                //}
-                //remove current
-                 
-                
-                
+                current=new Location(i);/*om id finns, append*/
+                current->appendLongDesc(pch);
+                this->locations->push_back(current);
             }
-            
         }
    }
     while(strncmp(line.c_str(), "-1", 2) != 0);
     //cout << current->toString();
-    current=new Location(i, temp);
-    this->locations->push_back(current);
-    current=NULL;
-    temp="";
+    
     for (int i = 0; i < this->locations->size(); i++) {
         cout << this->locations->at(i)->toString() << endl;
     }
-    
 }
 void Data::sectionTwo(fstream& file){
     
